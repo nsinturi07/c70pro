@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Text, View, TouchableOpacity, TextInput, Image, StyleSheet, Alert,KeyboardAvoidingView,ToastAndroid } from 'react-native';
+import { Text, View, TouchableOpacity, TextInput, Image, StyleSheet, Alert,KeyboardAvoidingView } from 'react-native';
 import * as Permissions from 'expo-permissions';
 import { BarCodeScanner } from 'expo-barcode-scanner';
 import * as firebase from "firebase";
@@ -65,7 +65,7 @@ export default class TransactionScreen extends React.Component {
             
             </View>
             <TouchableOpacity style={styles.submitButton} onPress={async()=>{this.handleTransaction()}}>
-            <Text style={styles.displayText}>
+            <Text style={styles.displayText}Alert.alert("Submitted")>
             submit
             </Text>
             </TouchableOpacity>
